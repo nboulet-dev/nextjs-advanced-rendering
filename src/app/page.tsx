@@ -1,11 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-import { getRandomBooks } from "@/lib/books"
+import { getBooks } from "@/lib/books"
 import { BookOpen } from "lucide-react"
 import Image from "next/image"
 
 export default async function HomePage() {
-  const books = (await getRandomBooks()).filter((book) => typeof book.coverUrl !== "undefined")
+  const books = (await getBooks()).filter((book) => typeof book.coverUrl !== "undefined")
   return (
     <main className="container max-w-4xl mx-auto px-4 py-12 space-y-10">
       {/* Page Header */}

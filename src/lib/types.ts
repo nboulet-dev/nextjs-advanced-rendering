@@ -7,3 +7,10 @@ export type OLBook = {
   key: OLBookKey
   title: string
 }
+
+export type Book = {
+  id: string
+  coverUrl: string
+  title: string
+  author: string
+}
