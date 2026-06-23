@@ -8,9 +8,22 @@ export type OLBook = {
   title: string
 }
 
+export type OLWork = {
+  authors: { key: OLAuthorKey; name: string }[]
+  covers?: number[]
+  key: OLBookKey
+  title: string
+  description: string | { value: string }
+  first_publish_date: string
+  subjects: string[]
+}
+
 export type Book = {
   id: string
-  coverUrl: string
+  coverId?: string
   title: string
   author: string
+  description?: string
+  firstPublishDate?: string
+  subjects?: string[]
 }
